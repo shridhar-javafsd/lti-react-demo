@@ -1,21 +1,16 @@
+import Emp from "./components/Emp";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-// const fun = (arg) => {
-//   console.log(arg);
-// }
-
-// const abc = 10;
-
-// fun(abc);
-
 const App = () => {
+
   return (
     <div>
       <Header />
       <Header></Header>
       <p>Welcome to LTI ReactJS app...</p>
-      <Footer firstName="Vaman" />
+      <Emp />
+      <Footer firstName="Vaman" lastName="Deshmukh" />
     </div>
   );
 }

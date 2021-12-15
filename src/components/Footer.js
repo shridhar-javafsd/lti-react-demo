@@ -13,6 +13,7 @@ const Footer = (props) => {
         <div>
             <p>This is footer</p>
             <p> {props.firstName} </p>
+            <p> {props.lastName} </p>
         </div>
     );
 }
