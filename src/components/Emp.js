@@ -3,11 +3,20 @@
 // React 16.8 onwards, state is available in function components also 
 // react provides hooks (methods) to use state 
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Emp = (props) => {
 
-    const [emp, setEmp] = useState({ eid: 101, firstName: 'Sonu', salary: 48000 });
+    // create state - useState()
+    const [emp, setEmp] = useState({});
+
+    // initilize state - useEffect()
+    useEffect(() => {
+        setEmp({ eid: 101, firstName: 'Sonu', salary: 48000 });
+        setMyName('Monu');
+    }, []);
+
+
 
     // how to create state with useState() hook
     const [num, setNum] = useState(0); // number 
@@ -16,7 +25,6 @@ const Emp = (props) => {
     const [empObj, setEmpObj] = useState({});// object 
     const [skillSet, setSkillSet] = useState([]); // array 
 
-
     // const emp = { eid: 101, firstName: 'Sonu', salary: 48000 };
 
     return (
@@ -24,8 +32,8 @@ const Emp = (props) => {
             <p>Emp Component</p>
             <h1>Employee Data</h1>
             <p> {emp.eid} {emp.firstName} {emp.salary} </p>
+            <p>{myName}</p>
         </div>
-
     );
 
 }
