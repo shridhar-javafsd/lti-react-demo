@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const Emp = (props) => {
 
-    const [emp, setEmp] = useState({});
+    const [emp, setEmp] = useState({ eid: 101, firstName: 'Sonu', salary: 48000 });
 
     // const emp = { eid: 101, firstName: 'Sonu', salary: 48000 };
 
