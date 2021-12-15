@@ -4,31 +4,35 @@
 // 1. function components 
 // 2. class components 
 
-import React from "react";
+// 1. function component 
 
-class Header extends React.Component {
+const Header = () => {
 
-    render = () => {
-        return (
-            <div>
-                <p>This is header</p>
-            </div>
-        );
-    };
+    // JSX 
 
+    return (
+        <div className="container">
+            <p>This is header</p>
+        </div>
+    );
 }
 
 export default Header;
 
-// 2. function component 
+// 2. class components 
 
-// const Header = () => {
+// import React from "react";
 
-//     return (
-//         <div>
-//             <p>This is header</p>
-//         </div>
-//     );
+// class Header extends React.Component {
+
+//     render = () => {
+//         return (
+//             <div>
+//                 <p>This is header</p>
+//             </div>
+//         );
+//     };
 // }
 
 // export default Header;
+
