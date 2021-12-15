@@ -1,10 +1,12 @@
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 const App = () => {
   return (
     <div>
+      <Header />
       <p>Welcome to LTI ReactJS app...</p>
-      <p>Welcome to LTI ReactJS app...</p>
-      <p>Welcome to LTI ReactJS app...</p>
+      <Footer />
     </div>
   );
 }
