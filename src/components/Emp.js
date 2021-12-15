@@ -27,8 +27,8 @@ const Emp = (props) => {
 
     return (
         <div>
-            <p>Emp Component</p>
-            <h1>Employee Data</h1>
+      <p className="display-4 text-primary">Emp Component</p>
+            <p>Employee Data</p>
             <p> {emp.eid} {emp.firstName} {emp.salary} </p>
             <p>{myName}</p>
         </div>

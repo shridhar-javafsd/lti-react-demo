@@ -11,8 +11,8 @@ const Header = () => {
     // JSX 
 
     return (
-        <div className="container">
-            <p>This is header</p>
+        <div>
+            <p className="text-primary  pt-3 mt-3">Header Component</p>
         </div>
     );
 }

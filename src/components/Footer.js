@@ -11,7 +11,7 @@ const Footer = (props) => {
 
     return (
         <div>
-            <p>This is footer</p>
+            <p className="text-primary">Footer Component</p>
             <p> {props.firstName} </p>
             <p> {props.lastName} </p>
         </div>
