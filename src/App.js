@@ -1,13 +1,25 @@
 
-function App() {
+const App = () => {
   return (
     <div>
+      <p>Welcome to LTI ReactJS app...</p>
+      <p>Welcome to LTI ReactJS app...</p>
       <p>Welcome to LTI ReactJS app...</p>
     </div>
   );
 }
-
 export default App;
+
+// function App() {
+//   return (
+//     <div>
+//       <p>Welcome to LTI ReactJS app...</p>
+//       <p>Welcome to LTI ReactJS app...</p>
+//       <p>Welcome to LTI ReactJS app...</p>
+//     </div>
+//   );
+// }
+// export default App;
 
 
 
