@@ -16,8 +16,6 @@ const Emp = (props) => {
         setMyName('Monu');
     }, []);
 
-
-
     // how to create state with useState() hook
     const [num, setNum] = useState(0); // number 
     const [myName, setMyName] = useState(''); // string 
