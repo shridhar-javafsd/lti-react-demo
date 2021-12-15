@@ -15,6 +15,7 @@ const MyMedia = () => {
             </div>
             <p>Tweet</p>
             <div>
+                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">React Conf 2021 Replay is starting in 15 minutes! Watch the live stream and join the discussion at: <a href="https://t.co/dvvan6z1il">https://t.co/dvvan6z1il</a></p>&mdash; React (@reactjs) <a href="https://twitter.com/reactjs/status/1468827005525368832?ref_src=twsrc%5Etfw">December 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
             </div>
             <p>LinkedIn</p>
