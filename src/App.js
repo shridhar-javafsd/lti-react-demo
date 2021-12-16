@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Dept from "./components/Dept";
 import Emp from "./components/Emp";
 import Footer from "./components/Footer";
@@ -6,16 +7,26 @@ import MyMedia from "./MyMedia";
 
 const App = () => {
 
+  const [dataInParent, setDataInParent] = useState(5);
+
+  const passDataToParent = (callbackFun) => {
+    console.log('passDataToParent');
+    setDataInParent(callbackFun);
+  }
+
   return (
     <div className="container">
       <Header />
       {/* <Header></Header> */}
       <p className="display-4 text-primary" >App Component</p>
       <p>Welcome to LTI ReactJS app...</p>
-      <Emp />
+      <p className="text-primary">App Component</p>
+      <p>Data from child in parent : {dataInParent}</p>
+
+      {/* <Emp /> */}
       {/* <Dept /> */}
       {/* <MyMedia /> */}
-      <Footer firstName="Vaman" lastName="Deshmukh" />
+      <Footer firstName="Vaman" lastName="Deshmukh" passData={passDataToParent} />
     </div>
   );
 }
