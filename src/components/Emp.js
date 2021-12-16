@@ -1,13 +1,11 @@
-
 import { useEffect, useState } from "react";
 
-const Emp = (props) => {
+const Emp = () => {
 
-    const [emp, setEmp] = useState({});
-    const [empInput, setEmpInput] = useState({});
-
+    const [emp, setEmp] = useState({}); // object to store and display emp data 
+    const [empInput, setEmpInput] = useState({}); // object to capture emp data 
     useEffect(() => {
-        setEmp({ eid: 101, firstName: 'Sonu', salary: 48000 });
+        setEmp({ eid: '', firstName: '', salary: '' });
         setEmpInput({ eid: '', firstName: '', salary: '' });
     }, []);
 
@@ -20,27 +18,26 @@ const Emp = (props) => {
     }
 
     const submitEmpInput = (evt) => {
-        console.log(evt.target.value);
+        console.log(empInput);
         setEmp(empInput);
         evt.preventDefault();
     }
 
     return (
-        <div>
+        <div className="container">
             <p className="display-4 text-primary">Emp Component</p>
             <div>
-                <p>Employee Data</p>
-                <p> {emp.eid} {emp.firstName} {emp.salary} </p>
+                <p>Employee Data: {emp.eid} {emp.firstName} {emp.salary} </p>
             </div>
-            <div>
-                <form >
-                    <input type="number" id="eid" name="eid" value={empInput.eid}
+            <div className="col-4">
+                <form className="form form-group form-primary">
+                    <input className="form-control mt-3" type="number" id="eid" name="eid" value={empInput.eid}
                         onChange={handleEmpChange} placeholder="Please enter eid"></input>
-                    <input type="text" id="firstName" name="firstName" value={empInput.firstName}
+                    <input className="form-control mt-3" type="text" id="firstName" name="firstName" value={empInput.firstName}
                         onChange={handleEmpChange} placeholder="Please enter name"></input>
-                    <input type="number" id="salary" name="salary" value={empInput.salary}
+                    <input className="form-control mt-3" type="number" id="salary" name="salary" value={empInput.salary}
                         onChange={handleEmpChange} placeholder="Please enter salary"></input>
-                    <input type="submit" id="submit" name="submit" value="submit"
+                    <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="submit"
                         onClick={submitEmpInput}></input>
                 </form>
             </div>
