@@ -12,9 +12,9 @@ const App = () => {
       {/* <Header></Header> */}
       <p className="display-4 text-primary" >App Component</p>
       <p>Welcome to LTI ReactJS app...</p>
-      {/* <Emp />
-      <Dept /> */}
-      <MyMedia />
+      <Emp />
+      {/* <Dept /> */}
+      {/* <MyMedia /> */}
       <Footer firstName="Vaman" lastName="Deshmukh" />
     </div>
   );

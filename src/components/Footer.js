@@ -12,8 +12,8 @@ const Footer = (props) => {
     return (
         <div>
             <p className="text-primary">Footer Component</p>
-            <p> {props.firstName} </p>
-            <p> {props.lastName} </p>
+            {/* <p> {props.firstName} </p> */}
+            {/* <p> {props.lastName} </p> */}
         </div>
     );
 }
