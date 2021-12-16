@@ -8,6 +8,7 @@ import { useState } from "react";
 const Footer = (props) => {
 
     const [dataInChild, setdataInChild] = useState(12);
+    // const [dataInChild, setdataInChild] = useState({});
 
     const passDataFromChild = () => {
         console.log('passDataFromChild');

@@ -23,7 +23,7 @@ const App = () => {
       <p className="text-primary">App Component</p>
       <p>Data from child in parent : {dataInParent}</p>
 
-      {/* <Emp /> */}
+      <Emp />
       {/* <Dept /> */}
       {/* <MyMedia /> */}
       <Footer firstName="Vaman" lastName="Deshmukh" passData={passDataToParent} />
