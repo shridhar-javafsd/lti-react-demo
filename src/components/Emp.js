@@ -21,15 +21,9 @@ const Emp = (props) => {
 
     const submitEmpInput = (evt) => {
         console.log(evt.target.value);
-        setEmp({
-            ...emp,
-            [evt.target.name]: evt.target.value
-        });
+        setEmp(empInput);
         evt.preventDefault();
     }
-
-
-
 
     return (
         <div>
