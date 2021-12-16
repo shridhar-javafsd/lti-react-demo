@@ -20,7 +20,7 @@ const AppUserComp = () => {
                 <form className="form form-group form-primary">
                     <input className="form-control mt-3" type="number" id="uid" name="uid" value={uid}
                         onChange={setUid} placeholder="Please enter userid"></input>
-                    <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="Add Employee"
+                    <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="Get App User"
                         onClick={submitGetAppUserById}></input>
                 </form>
             </div>
