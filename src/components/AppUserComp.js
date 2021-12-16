@@ -1,3 +1,5 @@
+
+import axios from "axios";
 import { useState } from "react";
 
 const AppUserComp = () => {
@@ -7,6 +9,12 @@ const AppUserComp = () => {
 
     const submitGetAppUserById = (evt) => {
         console.log('submitGetAppUserById');
+        // axios.get('http://localhost:8082/emp/getempbyid/4')
+        axios.get('https://jsonplaceholder.typicode.com/users/4')
+            .then((response) => {
+                console.log(response.data);
+            })
+            .catch();
         evt.preventDefault();
     }
 
