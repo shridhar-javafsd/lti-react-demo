@@ -14,7 +14,8 @@ const AppUserComp = () => {
         console.log('submitGetAppUserById');
         axios.get('https://jsonplaceholder.typicode.com/users/' + uid)
             .then((response) => {
-                console.log(response.data);
+                setAppUser(response.data);
+                console.log(appUser);
             })
             .catch((error) => {
                 console.log(error.message);
@@ -35,6 +36,9 @@ const AppUserComp = () => {
                     <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="Get App User"
                         onClick={submitGetAppUserById}></input>
                 </form>
+            </div>
+            <div>
+                <p>App user data : {appUser.name} {appUser.email}</p>
             </div>
         </div>
     );
