@@ -37,7 +37,7 @@ const Emp = () => {
                         onChange={handleEmpChange} placeholder="Please enter name"></input>
                     <input className="form-control mt-3" type="number" id="salary" name="salary" value={empInput.salary}
                         onChange={handleEmpChange} placeholder="Please enter salary"></input>
-                    <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="submit"
+                    <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="Add Employee"
                         onClick={submitEmpInput}></input>
                 </form>
             </div>
