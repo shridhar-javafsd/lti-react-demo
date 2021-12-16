@@ -1,9 +1,10 @@
 import { useState } from "react";
+import AppUserComp from "./components/AppUserComp";
 import Dept from "./components/Dept";
 import Emp from "./components/Emp";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import MyMedia from "./MyMedia";
+import MyMedia from "./components/MyMedia";
 
 const App = () => {
 
@@ -17,16 +18,16 @@ const App = () => {
   return (
     <div className="container">
       <Header />
-      {/* <Header></Header> */}
+      <Header></Header>
       <p className="display-4 text-primary" >App Component</p>
       <p>Welcome to LTI ReactJS app...</p>
-      <p className="text-primary">App Component</p>
+      <AppUserComp />
+      {/* <p className="text-primary">App Component</p>
       <p>Data from child in parent : {dataInParent}</p>
-
       <Emp />
-      {/* <Dept /> */}
-      {/* <MyMedia /> */}
-      <Footer firstName="Vaman" lastName="Deshmukh" passData={passDataToParent} />
+      <Dept />
+      <MyMedia />
+      <Footer firstName="Vaman" lastName="Deshmukh" passData={passDataToParent} /> */}
     </div>
   );
 }
