@@ -5,10 +5,6 @@
 
 import { useState } from "react";
 
-// const abc = 10;
-
-// fun(abc);
-
 const Footer = (props) => {
 
     const [dataInChild, setdataInChild] = useState(12);
