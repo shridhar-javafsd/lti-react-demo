@@ -79,11 +79,11 @@ export default Emp;
 //     }, []);
 
 //     // how to create state with useState() hook
-//     const [num, setNum] = useState(0); // number 
-//     const [myName, setMyName] = useState(''); // string 
-//     const [isEmployed, setIsEmployed] = useState(false); // boolean 
-//     const [empObj, setEmpObj] = useState({});// object 
-//     const [skillSet, setSkillSet] = useState([]); // array 
+    // const [num, setNum] = useState(0); // number 
+    // const [myName, setMyName] = useState(''); // string 
+    // const [isEmployed, setIsEmployed] = useState(false); // boolean 
+    // const [empObj, setEmpObj] = useState({});// object 
+    // const [skillSet, setSkillSet] = useState([]); // array 
 
 //     // const emp = { eid: 101, firstName: 'Sonu', salary: 48000 };
 

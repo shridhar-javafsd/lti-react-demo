@@ -3,6 +3,8 @@ import { useState } from "react";
 
 const AppUserComp = () => {
 
+    // assigmnent -  write code to update and delete appUsers 
+
     const [appUser, setAppUser] = useState({});
     const [appUsersList, setAppUsersList] = useState([]);
     const [appUserToAdd, setAppUserToAdd] = useState({});
@@ -46,6 +48,7 @@ const AppUserComp = () => {
             .then((response) => {
                 console.log(response.data);
                 alert(`User added successfully. ${response.data}`);
+                // alert('User added successfully.' + response.data);
             })
             .catch((error) => {
                 console.log(error.message);
@@ -90,11 +93,8 @@ const AppUserComp = () => {
                     </form>
                 </div>
                 <div>
-                    {appUsersList.map((a, k) => {
-                        return (
-                            <div k={k}> {a.id} {a.name} {a.username} {a.email}</div>
-                        );
-
+                    {appUsersList.map((appUser, key) => {
+                        return (<div key={key}> {appUser.email} {appUser.username} </div>);
                     })}
                 </div>
             </div>
