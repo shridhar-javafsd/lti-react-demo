@@ -41,6 +41,22 @@ const Emp = () => {
                         onClick={submitEmpInput}></input>
                 </form>
             </div>
+            <p className="display-4 text-primary">Emp Component</p>
+            <div>
+                <p>Employee Data: {emp.eid} {emp.firstName} {emp.salary} </p>
+            </div>
+            <div className="col-4">
+                <form className="form form-group form-primary">
+                    <input className="form-control mt-3" type="number" id="eid" name="eid" value={empInput.eid}
+                        onChange={handleEmpChange} placeholder="Please enter eid"></input>
+                    <input className="form-control mt-3" type="text" id="firstName" name="firstName" value={empInput.firstName}
+                        onChange={handleEmpChange} placeholder="Please enter name"></input>
+                    <input className="form-control mt-3" type="number" id="salary" name="salary" value={empInput.salary}
+                        onChange={handleEmpChange} placeholder="Please enter salary"></input>
+                    <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="Add Employee"
+                        onClick={submitEmpInput}></input>
+                </form>
+            </div>
         </div>
     );
 

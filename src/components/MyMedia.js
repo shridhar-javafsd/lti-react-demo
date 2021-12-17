@@ -1,7 +1,7 @@
 
 const MyMedia = () => {
     return (
-        <div>
+        <div className="container">
             <p className="display-4 text-primary">My Media Component</p>
             <p>YouTube Video</p>
             <div>

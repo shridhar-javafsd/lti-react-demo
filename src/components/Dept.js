@@ -10,10 +10,37 @@ const Dept = (props) => {
     }, []);
 
     return (
-        <div>
-            <p className="display-4 text-primary" >Dept Component</p>
-            <p>Department Data</p>
-            <p> {dep.did} {dep.dName} {dep.city} </p>
+        <div className="container">
+            <div>
+                <p className="display-4 text-primary" >Dept Component</p>
+                <p>Department Data</p>
+                <p> {dep.did} {dep.dName} {dep.city} </p>
+            </div>
+            <div>
+                <p className="display-4 text-primary" >Dept Component</p>
+                <p>Department Data</p>
+                <p> {dep.did} {dep.dName} {dep.city} </p>
+            </div>
+            <div>
+                <p className="display-4 text-primary" >Dept Component</p>
+                <p>Department Data</p>
+                <p> {dep.did} {dep.dName} {dep.city} </p>
+            </div>
+            <div>
+                <p className="display-4 text-primary" >Dept Component</p>
+                <p>Department Data</p>
+                <p> {dep.did} {dep.dName} {dep.city} </p>
+            </div>
+            <div>
+                <p className="display-4 text-primary" >Dept Component</p>
+                <p>Department Data</p>
+                <p> {dep.did} {dep.dName} {dep.city} </p>
+            </div>
+            <div>
+                <p className="display-4 text-primary" >Dept Component</p>
+                <p>Department Data</p>
+                <p> {dep.did} {dep.dName} {dep.city} </p>
+            </div>
         </div>
     );
 
