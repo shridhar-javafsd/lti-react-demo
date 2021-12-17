@@ -18,8 +18,7 @@ const App = () => {
   return (
     <div className="container">
       <Header />
-      <Header></Header>
-      <p className="display-4 text-primary" >App Component</p>
+      {/* <p className="display-4 text-primary" >App Component</p> */}
       <p>Welcome to LTI ReactJS app...</p>
       <AppUserComp />
       {/* <p className="text-primary">App Component</p>
