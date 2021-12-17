@@ -2,9 +2,12 @@
 const Header = () => {
 
     return (
-        <div>
-            <p>Header Component</p>
-        </div>
+        <header className="header">
+            <nav className="navbar bg-dark">
+            </nav>
+
+        </header>
+
     );
 }
 
