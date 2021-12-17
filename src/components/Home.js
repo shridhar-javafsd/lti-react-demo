@@ -8,7 +8,7 @@ const Home = () => {
             }} >
             <div className="container"
                 style={{ height: "100vh" }}>
-                <p className="display-4 text-dark">Welcome to LTI React App</p>
+                <p className="display-4 text-dark pt-3">Welcome to LTI React App</p>
             </div>
         </div >
     );
