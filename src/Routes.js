@@ -11,7 +11,6 @@ const Routes = () => {
 
     return (
         <div>
-            <p>Routes Component</p>
             <div>
                 <Router>
                     <div>
@@ -23,6 +22,7 @@ const Routes = () => {
                                 <Route path="/media" > <MyMedia /> </Route>
                             </Switch>
                         </div>
+                        <Footer />
                     </div>
                 </Router>
             </div>
