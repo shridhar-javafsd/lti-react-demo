@@ -6,7 +6,10 @@ const Header = () => {
         <header className="header sticky-top">
             <nav className="navbar navbar-fixed-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container">
-                    <Link className="navbar-brand" to="/">LTI</Link>
+                    {/* <Link className="navbar-brand" to="/">LTI</Link> */}
+                    <Link className="navbar-brand" to="/">
+                        <img height="24px" src="https://www.lntinfotech.com/wp-content/uploads/2017/05/LTI_Lets_Solve_wh.jpg" alt="LTI" ></img>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#abc">
                         <span className="navbar-toggler-icon" ></span>
                     </button>
