@@ -5,7 +5,7 @@ import AppUserComp from './components/AppUserComp';
 import Dept from './components/Dept';
 import Footer from './components/Footer';
 import MyMedia from './components/MyMedia';
-
+import Home from "./components/Home";
 
 const Routes = () => {
 
@@ -17,6 +17,8 @@ const Routes = () => {
                         <Header />
                         <div>
                             <Switch>
+                                <Route path="/home" > <Home /> </Route>
+                                <Route path="/dept" > <Dept /> </Route>
                                 <Route path="/emp" > <Emp /> </Route>
                                 <Route path="/appuser" > <AppUserComp /> </Route>
                                 <Route path="/media" > <MyMedia /> </Route>
