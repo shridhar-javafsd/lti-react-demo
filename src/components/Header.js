@@ -1,4 +1,16 @@
 
+const Header = () => {
+
+    return (
+        <div>
+            <p>Header Component</p>
+        </div>
+    );
+}
+
+export default Header;
+
+
 // components 
 // two types - 
 // 1. function components 
@@ -6,18 +18,6 @@
 
 // 1. function component 
 
-const Header = () => {
-
-    // JSX 
-
-    return (
-        <div>
-            <p className="text-primary  pt-3 mt-3">Header Component</p>
-        </div>
-    );
-}
-
-export default Header;
 
 // 2. class components 
 
