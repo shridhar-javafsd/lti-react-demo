@@ -5,6 +5,7 @@ const AppUserComp = () => {
 
     const [appUser, setAppUser] = useState({});
     const [appUsersList, setAppUsersList] = useState([]);
+    const [appUserToAdd, setAppUserToAdd] = useState({});
 
     const [uid, setUid] = useState('');
 
@@ -27,7 +28,7 @@ const AppUserComp = () => {
     }
 
     const submitGetAllAppUser = (evt) => {
-        console.log('submitGetAppUserById');
+        console.log('submitGetAllAppUser');
         axios.get(`https://jsonplaceholder.typicode.com/users/`)
             .then((response) => {
                 setAppUsersList(response.data);
@@ -39,7 +40,17 @@ const AppUserComp = () => {
         evt.preventDefault();
     }
 
-
+    const submitAddAppUser = (evt) => {
+        console.log('submitAddAppUser');
+        axios.post(`https://jsonplaceholder.typicode.com/users/`, appUserToAdd)
+            .then((response) => {
+                alert('User added successfully.')
+            })
+            .catch((error) => {
+                alert('User could not be added');
+            });
+        evt.preventDefault();
+    }
 
     return (
         <div className="container">
@@ -76,9 +87,10 @@ const AppUserComp = () => {
 
                     })}
                 </div>
-
             </div>
-
+            <div>
+                {/* Write code here  */}
+            </div>
         </div>
     );
 
