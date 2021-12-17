@@ -44,12 +44,22 @@ const AppUserComp = () => {
         console.log('submitAddAppUser');
         axios.post(`https://jsonplaceholder.typicode.com/users/`, appUserToAdd)
             .then((response) => {
-                alert('User added successfully.')
+                console.log(response.data);
+                alert(`User added successfully. ${response.data}`);
             })
             .catch((error) => {
-                alert('User could not be added');
+                console.log(error.message);
+                alert(`User could not be added ${error.message}`);
             });
         evt.preventDefault();
+    }
+
+    const handleAddAppUserChange = (evt) => {
+        console.log('handleAddAppUserChange');
+        setAppUserToAdd({
+            ...appUserToAdd,
+            [evt.target.name]: evt.target.value
+        });
     }
 
     return (
@@ -88,8 +98,23 @@ const AppUserComp = () => {
                     })}
                 </div>
             </div>
-            <div>
-                {/* Write code here  */}
+            <div className="border border-primary">
+                <div className="col-4">
+                    <form className="form form-group form-primary">
+                        <input className="form-control mt-3" type="text" id="username" name="username" value={appUserToAdd.username}
+                            onChange={handleAddAppUserChange} placeholder="Please enter username"></input>
+                        <input className="form-control mt-3" type="email" id="email" name="email" value={appUserToAdd.email}
+                            onChange={handleAddAppUserChange} placeholder="Please enter email"></input>
+                        <input className="form-control mt-3" type="number" id="phone" name="phone" value={appUserToAdd.phone}
+                            onChange={handleAddAppUserChange} placeholder="Please enter phone"></input>
+                        <input className="form-control mt-3" type="url" id="website" name="website" value={appUserToAdd.website}
+                            onChange={handleAddAppUserChange} placeholder="Please enter website"></input>
+                        <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="Add App User"
+                            onClick={submitAddAppUser}></input>
+                    </form>
+                </div>
+
+
             </div>
         </div>
     );
