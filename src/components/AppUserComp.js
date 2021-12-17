@@ -1,11 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 
-const title = "Mr"; // 'Mr' `Mr`
-const fullName = title + ' Anil Joshi';
-console.log(fullName);
-// Mr Anil Joshi 
-
 const AppUserComp = () => {
 
     const [appUser, setAppUser] = useState({});
@@ -67,7 +62,7 @@ const AppUserComp = () => {
             </div>
             <div>
                 <p>Get all App Users</p>
-                <div>
+                <div className="col-4">
                     <form className="form form-group form-primary">
                         <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="Get All App Users"
                             onClick={submitGetAllAppUser}></input>
