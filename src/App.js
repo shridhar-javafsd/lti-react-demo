@@ -1,37 +1,50 @@
-import { useState } from "react";
-import AppUserComp from "./components/AppUserComp";
-import Dept from "./components/Dept";
-import Emp from "./components/Emp";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import MyMedia from "./components/MyMedia";
+import Routes from "./Routes";
 
 const App = () => {
 
-  const [dataInParent, setDataInParent] = useState(5);
-
-  const passDataToParent = (callbackFun) => {
-    console.log('passDataToParent');
-    setDataInParent(callbackFun);
-  }
-
   return (
     <div className="container">
-      <Header />
-      {/* <p className="display-4 text-primary" >App Component</p> */}
-      <p>Welcome to LTI ReactJS app...</p>
-      <AppUserComp />
-      {/* <p className="text-primary">App Component</p>
-      <p>Data from child in parent : {dataInParent}</p>
-      <Emp />
-      <Dept />
-      <MyMedia />
-      <Footer firstName="Vaman" lastName="Deshmukh" passData={passDataToParent} /> */}
+      <Routes />
     </div>
   );
 }
 
 export default App;
+
+// import { useState } from "react";
+// import AppUserComp from "./components/AppUserComp";
+// import Dept from "./components/Dept";
+// import Emp from "./components/Emp";
+// import Footer from "./components/Footer";
+// import Header from "./components/Header";
+// import MyMedia from "./components/MyMedia";
+
+// const App = () => {
+
+//   const [dataInParent, setDataInParent] = useState(5);
+
+//   const passDataToParent = (callbackFun) => {
+//     console.log('passDataToParent');
+//     setDataInParent(callbackFun);
+//   }
+
+//   return (
+//     <div className="container">
+//       <Header />
+//       {/* <p className="display-4 text-primary" >App Component</p> */}
+//       <p>Welcome to LTI ReactJS app...</p>
+//       <AppUserComp />
+//       {/* <p className="text-primary">App Component</p>
+//       <p>Data from child in parent : {dataInParent}</p>
+//       <Emp />
+//       <Dept />
+//       <MyMedia />
+//       <Footer firstName="Vaman" lastName="Deshmukh" passData={passDataToParent} /> */}
+//     </div>
+//   );
+// }
+
+// export default App;
 
 // function App() {
 //   return (
