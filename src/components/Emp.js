@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const Emp = () => {
 
     const [emp, setEmp] = useState({}); // object to store and display emp data 
     const [empInput, setEmpInput] = useState({}); // object to capture emp data 
+
+    const appUserDataFromStoreToEmp = useSelector((state) => state.appUser.appUserState);
+
     useEffect(() => {
         setEmp({ eid: '', firstName: '', salary: '' });
         setEmpInput({ eid: '', firstName: '', salary: '' });
@@ -26,6 +30,7 @@ const Emp = () => {
     return (
         <div className="container">
             <p className="display-4 text-primary">Emp Component</p>
+            <p> appUserDataFromStoreToEmp {appUserDataFromStoreToEmp.name} </p>
             <div>
                 <p>Employee Data: {emp.eid} {emp.firstName} {emp.salary} </p>
             </div>
