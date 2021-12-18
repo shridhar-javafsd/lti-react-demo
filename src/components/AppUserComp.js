@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { getAppUserById } from '../redux/AppUserSlice';
+import { getAllAppUsers, getAppUserById } from '../redux/AppUserSlice';
 
 const AppUserComp = () => {
     console.log(`AppUserComp rendered`);
@@ -10,6 +10,7 @@ const AppUserComp = () => {
     const [uid, setUid] = useState('');
 
     const appUserDataFromStore = useSelector((state) => state.appUser.appUserState);
+    const appUsersListFromStore = useSelector((state) => state.appUser.appUsersList);
 
     const dispatch = useDispatch();
 
@@ -24,6 +25,19 @@ const AppUserComp = () => {
             .then((response) => {
                 console.log('submitGetAppUserById');
                 dispatch(getAppUserById(response.data));
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
+        evt.preventDefault();
+    }
+
+    const submitGetAllAppUsers = (evt) => {
+        console.log('submitGetAllAppUser');
+        axios.get(`https://jsonplaceholder.typicode.com/users/`)
+            .then((response) => {
+                dispatch(getAllAppUsers(response.data));
+                console.log(appUsersListFromStore);
             })
             .catch((error) => {
                 console.log(error.message);
@@ -48,13 +62,25 @@ const AppUserComp = () => {
                 </div>
                 <div>
                     <p>App user data : {appUserDataFromStore.name} {appUserDataFromStore.email}</p>
-
-
                 </div>
             </div>
-        </div>
-    );
+            <div>
+                <p>Get all App Users</p>
+                <div className="col-4">
+                    <form className="form form-group form-primary">
+                        <input className="form-control mt-3 btn btn-primary" type="submit" id="submit" name="submit" value="Get All App Users"
+                            onClick={submitGetAllAppUsers}></input>
+                    </form>
+                </div>
+                <div>
+                    {appUsersListFromStore .map((appUser, key) => {
+                        return (<div key={key}> {appUser.email} {appUser.username} </div>);
+                    })}
+                </div>
+            </div>
 
+        </div >
+    );
 }
 
 export default AppUserComp;
