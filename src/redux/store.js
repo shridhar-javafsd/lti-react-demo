@@ -7,6 +7,8 @@ import AppUserSlice from "./AppUserSlice";
 // 3. create slices for each components 
 // 4. use slices in the components 
 
+console.log(`store initilized`);
+
 const store = configureStore(
     {
         reducer: {

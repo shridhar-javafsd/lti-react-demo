@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { getAppUserById } from '../redux/AppUserSlice';
 
 const AppUserComp = () => {
+    console.log(`AppUserComp rendered`);
 
     const [uid, setUid] = useState('');
 
@@ -13,6 +14,7 @@ const AppUserComp = () => {
     const dispatch = useDispatch();
 
     const handleUidInput = (evt) => {
+        console.log(`handleUidInput`);
         setUid(evt.target.value);
     }
 

@@ -1,11 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+console.log(`AppUserSlice invoked`);
 const AppUserSlice = createSlice({
 
     name: 'appUser',
 
     initialState: {
-        
+
         appUserState: {}
 
     },
