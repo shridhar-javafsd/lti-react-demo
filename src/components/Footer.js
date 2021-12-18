@@ -2,9 +2,13 @@
 const Footer = () => {
 
     return (
-        <div>
-            <p>Footer</p>
-        </div>
+
+        <footer class="footer bg-secondary  pt-3 p-3">
+            <div>
+                <span class="text-dark text-center">React demo app for LTI trainees Dec 2021 </span>
+            </div>
+        </footer>
+
     );
 }
 
