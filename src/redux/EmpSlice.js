@@ -25,6 +25,6 @@ const EmpSlice = createSlice({
 
 });
 
-export const { getEmpById, /* getAllEmps */ } = AppUserSlice.actions;
+export const { getEmpById, /* getAllEmps */ } = EmpSlice.actions;
 
 export default EmpSlice.reducer;

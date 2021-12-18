@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import AppUserSlice from "./AppUserSlice";
+import EmpSlice from "./EmpSlice";
 
 // steps to create and use redux store - 
 // 1. create store - only one 
@@ -12,7 +13,8 @@ console.log(`store initilized`);
 const store = configureStore(
     {
         reducer: {
-            appUser: AppUserSlice
+            appUser: AppUserSlice,
+            emp: EmpSlice
             // add reducers here 
         }
     }
