@@ -19,3 +19,20 @@ const store = configureStore(
 );
 
 export default store;
+
+
+// state = store;
+// state.appUser.appUserState
+// state.appUser.appUsersList
+// state.emp.empData
+
+
+
+
+
+
+
+
+
+
+
