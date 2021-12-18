@@ -48,6 +48,8 @@ const AppUserComp = () => {
                 </div>
                 <div>
                     <p>App user data : {appUserDataFromStore.name} {appUserDataFromStore.email}</p>
+
+
                 </div>
             </div>
         </div>
