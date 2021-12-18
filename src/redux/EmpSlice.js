@@ -11,6 +11,10 @@ const EmpSlice = createSlice({
     },
 
     reducers: {
+        addEmp: (state, action) => {
+            console.log(`EmpSlice addEmp`);
+            state.empData = action.payload;
+        },
         getEmpById: (state, action) => {
             console.log(`EmpSlice getempById`);
             state.empData = action.payload;
@@ -25,6 +29,6 @@ const EmpSlice = createSlice({
 
 });
 
-export const { getEmpById, /* getAllEmps */ } = EmpSlice.actions;
+export const { addEmp, getEmpById, /* getAllEmps */ } = EmpSlice.actions;
 
 export default EmpSlice.reducer;

@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-
+import { useDispatch } from "react-redux";
+import { addEmp } from '../redux/EmpSlice';
 const Emp = () => {
 
     const [emp, setEmp] = useState({}); // object to store and display emp data 
     const [empInput, setEmpInput] = useState({}); // object to capture emp data 
+
+    const dispatch = useDispatch();
+
+    const empDataFromStore = useSelector((state) => state.emp.empData);
 
     const appUserDataFromStoreToEmp = useSelector((state) => state.appUser.appUserState);
 
@@ -23,21 +28,21 @@ const Emp = () => {
 
     const submitEmpInput = (evt) => {
         console.log(empInput);
-        setEmp(empInput);
+        dispatch(addEmp(empInput));
         evt.preventDefault();
     }
 
     return (
         <div className="container">
             <p className="display-4 text-primary">Emp Component</p>
-            <p> appUserDataFromStoreToEmp {appUserDataFromStoreToEmp.name} </p>
+            {/* <p> appUserDataFromStoreToEmp {appUserDataFromStoreToEmp.name} </p> */}
             <div>
-                <p>Employee Data: {emp.eid} {emp.firstName} {emp.salary} </p>
+                <p>Employee Data: {empDataFromStore.eid} {empDataFromStore.firstName} {empDataFromStore.salary} </p>
             </div>
             <div className="col-4">
                 <form className="form form-group form-primary">
                     <input className="form-control mt-3" type="number" id="eid" name="eid" value={empInput.eid}
-                        onChange={handleEmpChange} placeholder="Please enter eid"></input>
+                        onChange={handleEmpChange} placeholder="Please enter eid" autoFocus ></input>
                     <input className="form-control mt-3" type="text" id="firstName" name="firstName" value={empInput.firstName}
                         onChange={handleEmpChange} placeholder="Please enter name"></input>
                     <input className="form-control mt-3" type="number" id="salary" name="salary" value={empInput.salary}
