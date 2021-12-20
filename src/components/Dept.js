@@ -3,9 +3,9 @@
 // provide context - YourContext.Provider
 // consume context - YourContext.Consumer
 
-
 import { useEffect, useState } from "react";
 import Dept2 from "./Dept2";
+import { DeptContext } from './context';
 
 const Dept = () => {
     const [deptData, setDeptData] = useState('');
@@ -18,7 +18,10 @@ const Dept = () => {
         <div className="container">
             <p className="display-4 text-primary" >Dept1 Component</p>
             <p>Dept1 component: {deptData} </p>
-            <Dept2 deptDataToPass={deptData} />
+            <DeptContext.Provider value={deptData}>
+                <Dept2 />
+            </DeptContext.Provider>
+
             <div>
             </div>
         </div>
@@ -26,6 +29,31 @@ const Dept = () => {
 }
 
 export default Dept;
+
+
+
+// import { useEffect, useState } from "react";
+// import Dept2 from "./Dept2";
+
+// const Dept = () => {
+//     const [deptData, setDeptData] = useState('');
+
+//     useEffect(() => {
+//         setDeptData('Some department data...');
+//     }, []);
+
+//     return (
+//         <div className="container">
+//             <p className="display-4 text-primary" >Dept1 Component</p>
+//             <p>Dept1 component: {deptData} </p>
+//             <Dept2 deptDataToPass={deptData} />
+//             <div>
+//             </div>
+//         </div>
+//     );
+// }
+
+// export default Dept;
 
 
 // import { useEffect, useState } from "react";
