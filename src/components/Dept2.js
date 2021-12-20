@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import Dept3 from "./Dept3";
 
 const Dept2 = (props) => {

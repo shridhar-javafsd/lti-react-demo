@@ -1,5 +1,8 @@
-
 // context API 
+// create context - React.createContext()
+// provide context - YourContext.Provider
+// consume context - YourContext.Consumer
+
 
 import { useEffect, useState } from "react";
 import Dept2 from "./Dept2";
